@@ -1,0 +1,322 @@
+<!DOCTYPE html> <!--PAGINA WEB - INVITACIÓN BODA - By. Erick Vazquez Estrada-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación de Boda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" /> <!-- Fuente negrita cursiva-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cookie&family=Italianno&display=swap" rel="stylesheet"> <!--Fuente del Inicio-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" /> 
+</head>
+<body>
+
+  <section class="seccion-1">
+    <img src="assets/images/rosa.png" alt="Rosa" /><!--img rosa-->
+    <h1>¡NOS CASAMOS!</h1>
+  </section>
+
+  <section class="seccion-2">
+    <div class="sobre-triangulo">
+      <img class="sello" src="assets/images/sello.png" alt="Sello de cera" /><!--img sello-->
+    </div>
+
+    <div class="contenido"> <!--part1-->
+      <p>Queremos que sean parte<br>de un dia<br>muy importante en<br>nuestras vidas</p>
+
+      <div class="nombres fade-in-up">
+        <div class="nombre" data-text="Victor"></div>
+        <div class="nombre" data-text="&"></div>
+        <div class="nombre" data-text="Guadalupe"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-3 fade-in-up"><!--conteo-->
+   <div class="fecha-boda">
+    <h2>Faltan...</h2>
+    <div id="countdown">
+      <span id="dias"></span>d :
+      <span id="horas"></span>h :
+      <span id="minutos"></span>m :
+      <span id="segundos"></span>s
+    </div>
+    <p>11 de Octubre de 2025</p>
+   </div>
+  </section>
+<script> 
+  const countdown = () => {
+    const fechaBoda = new Date("2025-10-11T00:00:00").getTime();
+    const ahora = new Date().getTime();
+    const diferencia = fechaBoda - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").textContent = dias;
+    document.getElementById("horas").textContent = horas;
+    document.getElementById("minutos").textContent = minutos;
+    document.getElementById("segundos").textContent = segundos;
+  };
+
+  countdown();
+  setInterval(countdown, 1000);
+</script>
+
+  <section class="itinerario">
+    <h2 class="itinerario-titulo fade-in-up">Itinerario</h2>
+    <div class="linea-decorativa">❧</div>
+    <div class="horarios">
+    <div class="columna">
+        <p><strong>Banquete</strong><br>03:00 pm</p>
+        <p><strong>Ceremonia</strong><br>04:00 pm</p>
+        <p><strong>Mesa de Dulces</strong><br>06:30 pm</p>
+      </div>
+        <div class="columna">
+        <p><strong>Vals (Ari)</strong><br>08:00 pm</p>
+        <p><strong>Pastel</strong><br>09:00 pm</p>
+        <p><strong>Baile</strong><br>09:30 pm</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="ubicacion">
+  <h2 class="ubicacion-titulo fade-in-up">Ubicación</h2>
+  </div>
+
+    <div class="eventos">
+      <div class="evento">
+        <img src="assets/images/recepcion.png" alt="Recepción" loading="lazy" class="icono-evento" />
+        <h3 class="evento-nombre">Recepción</h3>
+        <p class="evento-hora"><strong>14:30</strong></p>
+        <p class="evento-lugar">Restaurante Bar<br>"Las Codornices"</p>
+      </div>
+
+      <div class="evento">
+        <img src="assets/images/ceremonia.png" alt="Ceremonia Civil" loading="lazy" class="icono-evento" />
+        <h3 class="evento-nombre">Ceremonia Civil</h3>
+        <p class="evento-hora"><strong>16:00</strong></p>
+        <p class="evento-lugar">Restaurante Bar<br>"Las Codornices"</p>
+      </div>
+
+      
+    </div>
+      <div class="boton-ubicacion-unico fade-in-up">
+        <a href="https://maps.app.goo.gl/dS3REotzN3ggvujU9" 
+            class="boton-mapa" target="_blank">Ver ubicación</a>
+    </div>
+  </section>
+
+<section class="galeria">
+  <h2 class="galeria-titulo fade-in-up">Momentos Especiales</h2>
+  <div class="galeria-grid fade-in-up">
+    <img src="assets/images/foto1.jpg" class="galeria-img tall" alt="." />
+    <img src="assets/images/foto2.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto3.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto4.jpg" class="galeria-img wide" alt="." />
+    <img src="assets/images/foto5.jpg" class="galeria-img landscape" alt="." />
+    <img src="assets/images/foto6.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto7.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto9.jpg" class="galeria-img tall" alt="." />
+    <img src="assets/images/foto10.jpg" class="galeria-img landscape" alt="." />
+    <img src="assets/images/foto11.jpg" class="galeria-img wide" alt="." />
+    <img src="assets/images/foto12.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto13.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto14.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto15.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto16.jpg" class="galeria-img landscape" alt="." />
+    <img src="assets/images/foto17.jpg" class="galeria-img wide" alt="." />
+    <img src="assets/images/foto18.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto19.jpg" class="galeria-img" alt="." />
+    <img src="assets/images/foto20.jpg" class="galeria-img wide" alt="." />
+    <img src="assets/images/foto21.jpg" class="galeria-img tall" alt="." />
+    <img src="assets/images/foto24.jpeg" class="galeria-img" alt="." />
+    <img src="assets/images/foto23.jpg" class="galeria-img wide" alt="." />
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll('.galeria-img');
+    const lightbox = document.createElement('div');
+    lightbox.classList.add('lightbox');
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = document.createElement('img');
+    lightbox.appendChild(lightboxImg);
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  });
+</script>
+
+<script>
+  // Observer para animaciones generales
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in-up').forEach(el => {
+    fadeObserver.observe(el);
+  });
+</script>
+
+<script>
+  function escribirTexto(element, texto, delay = 150) {//tiempo
+    let i = 0;
+    const intervalo = setInterval(() => {
+      element.textContent += texto[i];
+      i++;
+      if (i === texto.length) {
+        clearInterval(intervalo);
+        element.style.borderRight = 'none';
+      }
+    }, delay);
+  }
+
+  const escribirObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const nombres = entry.target.querySelectorAll('.nombre');
+        let totalDelay = 0;
+
+        nombres.forEach((el) => {
+          const texto = el.dataset.text;
+          setTimeout(() => {
+            escribirTexto(el, texto);
+          }, totalDelay);
+          totalDelay += texto.length * 150 + 500;//tiempo
+        });
+
+        escribirObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  escribirObserver.observe(document.querySelector('.nombres'));
+</script>
+
+<audio id="musica" autoplay>
+  <source src="assets/audio/I Promise You.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('musica');
+    audio.play();
+  }, { once: true });
+</script>
+
+<script>
+  const audio = document.getElementById('musica');
+  audio.volume = 0.2;
+</script>
+
+  <section class="confirmacion-asistencia">
+    <h2><strong>¡Nos honrarías mucho con tu presencia!</strong></h2>
+    <a href="#" class="boton-mapa-asistencia" onclick="abrirModal(); event.preventDefault();">Confirmar asistencia</a>
+
+  <!-- Modal con formulario -->
+    <div id="modal-confirmacion" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h3>Confirmación de asistencia</h3>
+        <form id="form-confirmacion">
+          <label for="familia">Familia*</label>
+          <input type="text" id="familia" name="familia" required>
+
+          <label for="mensaje">¿Quieres dejar algun mensaje?</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Redacta aquí"></textarea>
+
+          <button type="submit" class="boton-enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<script>
+  function abrirModal() {
+    document.getElementById("modal-confirmacion").style.display = "block";
+  }
+
+  function cerrarModal() {
+    document.getElementById("modal-confirmacion").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal-confirmacion");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  document.getElementById("form-confirmacion").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const familia = document.getElementById("familia").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const data = new FormData();
+    data.append("entry.484807033", familia);
+    data.append("entry.1361041700", mensaje);
+
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSeoQ-zSyL0sH8Cg_Hb-nvUAHfxeCX18y1OAbNl-OGZ5F9SPqA/formResponse", {      method: "POST",
+      mode: "no-cors",
+      body: data
+    }).then(() => {
+      alert("¡Gracias por confirmar tu asistencia!");
+      cerrarModal();
+      document.getElementById("form-confirmacion").reset();
+    });
+  });
+</script>
+
+<section class="seccion-regalo">
+  <h2>Un detalle especial</h2>
+  <p>Tu presencia es el mejor regalo, pero si deseas hacernos un detalle extra, lo agradeceremos con mucho cariño.</p>
+</section>
+
+<section class="seccion-contacto">
+  <h2>¿Te gustó la invitación?</h2>
+  <p>Si deseas una página web como esta, ¡contáctame!<br><br>Erick Vazquez Estrada</p>
+
+  <div class="redes-contacto">
+    <a href="https://www.instagram.com/erixk_v/" target="_blank" class="contacto-link instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://wa.me/7225368687" target="_blank" class="contacto-link whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="http://linkedin.com/in/erick-vazquez-8b53312b5" target="_blank" class="contacto-link linkedin">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100009558380810" target="_blank" class="contacto-link facebook">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
