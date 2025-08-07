@@ -379,7 +379,7 @@ body {
 
 .galeria {
   padding: 60px 20px;
-  background-image: url('/.netlify/images?url=/img/fondo2.jpg&width=1600&format=webp');
+  background-image: url('/.netlify/images?url=/assets/images/fondo2.jpg&width=1600&format=webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
